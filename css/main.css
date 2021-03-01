@@ -13,24 +13,24 @@ body {
 }
 
 header {
-    font-size: 5vmin;
+    font-size: 10vmin;
     letter-spacing: 1vmin;
 }
 
 .board { 
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 20vmin 20vmin 20vmin;
+    grid-template-rows: 20vmin 20vmin 20vmin;
     background-color:gray;
-    padding: 10px;
+    
 }
 
 .boxes {
     background-color: white;
-    font-size: 40px;
     border: solid black;
     text-align: center;
-    padding: 20px 35px;
-    color: white;
+    padding: 2vmin;
+    font-size: 10vmin;
 }
 
 button { 
