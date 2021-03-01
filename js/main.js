@@ -51,7 +51,7 @@ function clearBoard() {
 
 function handleChoice(evt) {
     const boxIdx = boxEls.indexOf(evt.target);
-    console.log(boxIdx);
+    // console.log(boxIdx);
     if (boxIdx === -1 || winner || board[boxIdx] !== null) {
         return;
     } else if (turn === 1) { 
@@ -65,7 +65,7 @@ function handleChoice(evt) {
         div.style.backgroundColor = colorLookUp[board[boxIdx]];
         div.textContent = 'O';
     }
-    console.log(board);
+    // console.log(board);
     board[boxIdx] = turn;
     turn *= -1; 
     winner = getWinner(); 
