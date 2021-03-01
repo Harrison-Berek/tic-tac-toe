@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'DotGothic16', 'sans-serif';
+    background-color: gray;
 }
 
 header {
