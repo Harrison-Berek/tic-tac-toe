@@ -5,6 +5,11 @@ const colorLookUp = {
     '-1': 'lightblue'
 }; 
 
+const turnXO = {
+    '1': 'X',
+    '-1': 'O'
+}
+
 const winCombos = [[0,1,2], [3,4,5], [6,7,8], 
     [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]
 ];
@@ -58,7 +63,7 @@ function handleChoice(evt) {
         board[boxIdx] = -1;
         const div = document.getElementById(`box${boxIdx}`);
         div.style.backgroundColor = colorLookUp[board[boxIdx]];
-        div.textContent = '0';
+        div.textContent = 'O';
     }
     console.log(board);
     board[boxIdx] = turn;
@@ -86,10 +91,10 @@ function render () {
         msgEl.textContent = "Cats Game!";
       } else if (winner) {
         // A player has won
-        msgEl.innerHTML = `<span style="color: ${colorLookUp[winner]}">${colorLookUp[winner].toUpperCase()}</span> Wins!`;
+        msgEl.innerHTML = `<span style="color: ${colorLookUp[winner]}">${turnXO[turn * -1]}</span> Wins!`;
       } else {
         // No winner yet, show whose turn
-        msgEl.innerHTML = `<span style="color: ${colorLookUp[turn]}">${colorLookUp[turn].toUpperCase()}</span>'s Turn`;
+        msgEl.innerHTML = `<span style="color: ${colorLookUp[turn]}">${turnXO[turn]}</span>'s Turn`;
       } 
     //replay button
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
