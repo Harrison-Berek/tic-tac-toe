@@ -1,6 +1,6 @@
 /*----- constants -----*/ 
 const colorLookUp = {
-    'null': 'white',
+    'null': null,
     '1': 'orange',
     '-1': 'lightblue'
 }; 
